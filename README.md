@@ -107,6 +107,10 @@ Deployment: Provide the road_patched.xodr to the customer for their demo.
 * **Schema Validation:** Scanned the XML structure to find empty attributes in the `<road>` elements
 * **Quick Fix:** Developed a non-destructive script to inject IDs without altering the road geometry
 
+### Visual Verification
+After applying the patch, the road network can be successfully visualized and inspected:
+![Final_view](data/Final_view.png)
+
 ### Customer Communication
 
 * **Immediate Value:**
