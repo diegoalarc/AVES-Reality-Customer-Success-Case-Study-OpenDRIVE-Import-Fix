@@ -1,0 +1,12 @@
+name: aves-study
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - jupyter
+  - ipykernel
+  - pip
+  - pip:
+    # Any specific pip-only packages would go here
+    - notebook
