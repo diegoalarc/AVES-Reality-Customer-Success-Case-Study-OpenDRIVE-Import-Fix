@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints
+
+# Data (Protecting customer data)
+data/road_patched.xodr
+.env
