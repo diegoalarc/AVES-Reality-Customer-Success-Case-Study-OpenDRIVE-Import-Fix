@@ -128,4 +128,3 @@ Deployment: Provide the road_patched.xodr to the customer for their demo.
 ## 👤 Author
 
 **Name:** Diego Alarcón
-**Role:** Candidate for Customer Success Engineer
