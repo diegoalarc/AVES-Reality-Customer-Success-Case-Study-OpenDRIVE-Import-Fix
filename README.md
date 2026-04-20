@@ -25,32 +25,31 @@ This project uses zero external dependencies for the core logic to ensure maximu
 ### Option A: Using Conda (Recommended)
 
 ```bash
-# Create a new environment
-conda create -n aves-study python=3.9
+# 1. Create a new environment with Python 3.9
+conda create -n aves-study python=3.9 -y
 
-# Activate the environment
+# 2. Activate the environment
 conda activate aves-study
 
-# Install Jupyter
-conda install jupyter
+# 3. Install Jupyter using the environment.yml or directly
+conda env update --file environment.yml
+# OR manually: conda install jupyter -y
 ````
 
 ### Option B: Using Pip
 
 ```bash
-# Create a virtual environment
+# 1. Create a virtual environment
 python -m venv aves_env
 
-# Activate it
-
-## On Windows:
+# 2. Activate the environment
+# On Windows:
 aves_env\Scripts\activate
-
-## On macOS/Linux:
+# On macOS/Linux:
 source aves_env/bin/activate
 
-# Install Jupyter
-pip install jupyter
+# 3. Install the requirements
+pip install -r requirements.txt
 ```
 
 ### Requirements
@@ -61,27 +60,42 @@ pip install jupyter
 
 ---
 
-## 🚀 3. How to Run
+🚀 3. How to Run
+1. Activate the Environment
+Before running the notebook, ensure your environment is active so that Jupyter can access the necessary components.
 
-**Prepare the Data:**
-Place the original `road.xodr` file provided by the customer in the root directory of this project.
+If using Conda:
 
-**Launch Jupyter:**
+```bash
+conda activate aves-study
+If using Pip (Virtual Env):
+
+# Windows
+aves_env\Scripts\activate
+
+# macOS/Linux
+source aves_env/bin/activate
+```
+2. Prepare the Data
+Place the original road.xodr file provided by the customer in the data/ directory (or the root directory, depending on your folder structure).
+
+3. Launch Jupyter
+Run the following command in your terminal to start the notebook server:
 
 ```bash
 jupyter notebook
 ```
+4. Execute the Fix
+In the browser window that opens, select AVES_Solution_Notebook.ipynb.
 
-**Execute the Fix:**
+Run all cells by selecting Cell > Run All from the top menu.
 
-* Open `AVES_Solution_Notebook.ipynb`
-* Run all cells (`Cell > Run All`)
+5. Verify & Deliver
+Internal Check: A text-based report will appear in the notebook showing which specific Road IDs were patched.
 
-**Verify:**
+Geometry Check: Use odrviewer.io to upload the generated road_patched.xodr and verify that the road network renders correctly.
 
-* The script will generate `road_patched.xodr`
-* A text-based report will appear in the notebook showing which IDs were fixed
-* Use [https://odrviewer.io](https://odrviewer.io) to upload the patched file and verify the geometry
+Deployment: Provide the road_patched.xodr to the customer for their demo.
 
 ---
 
