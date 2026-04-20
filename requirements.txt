@@ -1,0 +1,5 @@
+# Core Requirements for AVES Case Study
+# Note: XML and OS modules are part of the Python Standard Library
+
+jupyter>=1.0.0
+ipykernel>=6.0.0
